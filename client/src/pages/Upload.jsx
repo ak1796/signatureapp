@@ -20,8 +20,9 @@ const Upload = () => {
       });
       alert("File uploaded successfully!");
     } catch (err) {
-      alert("Upload failed.");
-    }
+  console.error("Upload Error:", err.response?.data || err.message);
+  alert("Upload failed.");
+}
   };
 
   return (
